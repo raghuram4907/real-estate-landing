@@ -1,5 +1,4 @@
-const API = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-  ? 'http://localhost:5000/api' : '/api';
+const API = '/api';
 
 async function fetchProjects(){
   const res = await fetch(API + '/projects');
@@ -8,7 +7,7 @@ async function fetchProjects(){
   
   container.innerHTML = list.map(p => `
     <div class="project-card">
-      <img src="${p.image || 'http://localhost:5000/uploads/4th year full stack Assets/4th year full stack Assets/Lead Generation Landing page (Images)/Rectangle.svg'}" alt="${p.name}" />
+      <img src="${p.image || '/uploads/4th year full stack Assets/4th year full stack Assets/Lead Generation Landing page (Images)/Rectangle.svg'}" alt="${p.name}" />
       <div class="project-card-content">
         <h3>${p.name}</h3>
         <span class="category">${p.description}</span>
@@ -25,7 +24,7 @@ async function fetchClients(){
   
   container.innerHTML = list.map(c => `
     <div class="client-card">
-      <img src="${c.image || 'http://localhost:5000/uploads/4th year full stack Assets/4th year full stack Assets/Lead Generation Landing page (Images)/Ellipse 28.svg'}" alt="${c.name}" />
+      <img src="${c.image || '/uploads/4th year full stack Assets/4th year full stack Assets/Lead Generation Landing page (Images)/Ellipse 28.svg'}" alt="${c.name}" />
       <p>${c.description}</p>
       <strong>${c.name}</strong>
       <small>${c.designation || ''}</small>

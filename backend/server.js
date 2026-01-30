@@ -28,6 +28,10 @@ const Subscription = require('./models/Subscription');
 const uploadsDir = path.join(__dirname, 'uploads');
 app.use('/uploads', express.static(uploadsDir));
 
+// Serve frontend files
+const frontendDir = path.join(__dirname, '../frontend');
+app.use(express.static(frontendDir));
+
 // Multer setup (store in memory for cropping)
 const storage = multer.memoryStorage();
 const upload = multer({ storage });

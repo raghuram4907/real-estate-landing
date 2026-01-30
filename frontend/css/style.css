@@ -570,7 +570,7 @@ body {
 .bottom-cta-section {
   padding: 80px 0;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-              url('http://localhost:5000/uploads/4th year full stack Assets/4th year full stack Assets/Lead Generation Landing page (Images)/pexels-andres-ayrton-6578391.svg') center/cover;
+              url('/uploads/4th year full stack Assets/4th year full stack Assets/Lead Generation Landing page (Images)/pexels-andres-ayrton-6578391.svg') center/cover;
   text-align: center;
   color: var(--white);
 }
