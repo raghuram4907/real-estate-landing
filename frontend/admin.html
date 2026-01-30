@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel - Real Trust</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero small">
+    <div class="container">
+      <h1 style="margin:0; font-size:1.8em;">Admin Panel</h1>
+    </div>
+  </header>
+
+  <main class="admin-grid">
+    <section>
+      <h3>Add Project</h3>
+      <form id="project-form" enctype="multipart/form-data">
+        <input name="name" placeholder="Project name" required />
+        <textarea name="description" placeholder="Description (e.g., Design • Modern)" required></textarea>
+        <input type="file" name="image" accept="image/*" />
+        <button type="submit">Add Project</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Add Client</h3>
+      <form id="client-form" enctype="multipart/form-data">
+        <input name="name" placeholder="Client name" required />
+        <input name="designation" placeholder="Designation (e.g., CEO, Designer)" required />
+        <textarea name="description" placeholder="Client testimonial"></textarea>
+        <input type="file" name="image" accept="image/*" />
+        <button type="submit">Add Client</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Contact Form Submissions</h3>
+      <div id="contacts-list"></div>
+    </section>
+
+    <section>
+      <h3>Newsletter Subscriptions</h3>
+      <div id="subs-list"></div>
+    </section>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
