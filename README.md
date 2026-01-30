@@ -76,6 +76,11 @@ npm run dev    # Development with auto-reload
 npm start      # Production
 ```
 
+**Seed the database with dummy data:**
+```bash
+npm run seed   # Populates 5 projects and 5 clients
+```
+
 ### 2. Frontend Setup
 
 Open the frontend pages in your browser:

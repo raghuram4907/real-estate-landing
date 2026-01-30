@@ -8,7 +8,8 @@ Make sure MongoDB is running locally, or update `backend/.env` with MongoDB Atla
 ### Step 2: Start Backend
 ```bash
 cd backend
-npm run dev
+npm run seed   # First time: seed database with dummy data
+npm run dev    # Start the server
 ```
 Backend will run on http://localhost:5000
 
