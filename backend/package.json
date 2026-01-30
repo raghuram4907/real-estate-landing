@@ -1,7 +1,7 @@
 {
   "name": "landing-backend",
   "version": "1.0.0",
-  "description": "Backend for landing page + admin panel assignment",
+  "description": "Real estate landing page backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

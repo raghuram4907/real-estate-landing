@@ -5,11 +5,10 @@ dotenv.config();
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/landingdb';
 
-// Models
 const Project = require('./models/Project');
 const Client = require('./models/Client');
 
-// Dummy Projects Data
+// Sample data to populate database
 const projects = [
   {
     name: 'Modern Residential Complex',

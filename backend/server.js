@@ -14,25 +14,26 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/landingdb';
 
+// Connect to MongoDB
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error', err));
 
-// Models
+// Load models
 const Project = require('./models/Project');
 const Client = require('./models/Client');
 const Contact = require('./models/Contact');
 const Subscription = require('./models/Subscription');
 
-// Static uploads
+// Serve uploads folder
 const uploadsDir = path.join(__dirname, 'uploads');
 app.use('/uploads', express.static(uploadsDir));
 
-// Serve frontend files
+// Serve frontend
 const frontendDir = path.join(__dirname, '../frontend');
 app.use(express.static(frontendDir));
 
-// Multer setup (store in memory for cropping)
+// Setup file upload
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
